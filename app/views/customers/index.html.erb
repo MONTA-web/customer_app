@@ -10,7 +10,7 @@
            <%= "こんにちは#{current_user.name}さん" %>
           </li>
           <li class="right_list">
-          <a class="login" href="#">ログアウト</a>
+          <%= link_to "ログアウト", destroy_user_session_path,method: :delete,class: "login" %>
           </li>
         </ul>
         <% else %>
@@ -19,7 +19,7 @@
            <%= link_to "新規登録", new_user_registration_path, class: "sign_up"  %>
           </li>
           <li class="right_list">
-          <a class="login" href="#">ログイン</a>
+          <%= link_to "ログイン", new_user_session_path, class: "login" %>
           </li>
         </ul>
       <% end %>
@@ -27,6 +27,7 @@
   </div>
   
   <div class="main">
+  <% if user_signed_in? %>
     <ul class="contents">
       <li class="upper_content">
         <a href="#">顧客情報作成</a>
@@ -38,5 +39,6 @@
         <a href="#">売上データルーム作成</a>
       </li>
     </ul>
+  <% end %>
   </div>
 </div>
