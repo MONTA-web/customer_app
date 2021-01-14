@@ -13,3 +13,59 @@
  *= require_tree .
  *= require_self
  */
+.container{
+  margin-top: 50px;
+  border: 10px solid green;
+  padding: 40px;
+  background-color: lavender;
+  width: 500px;
+  height: 700px;
+  border-radius: 4px;
+}
+
+h2{
+  font-size: 50px;
+  text-align: center;
+  opacity: 0.6;
+}
+
+.field{
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+label{
+  font-size: 20px;
+}
+
+input{
+  width: 100%;
+}
+
+.actions{
+  margin-top: 50px;
+  border-radius: 100px;
+  opacity: 0.7;
+}
+
+.actions input{
+  background-color: rgb(45, 205, 211);
+  padding: 20px;
+  font-size: 20px;
+}
+
+em{
+  font-size: 20px;
+}
+
+.field_with_errors{
+  display: inline;
+}
+
+.login-flash-message{
+  color: red;
+}
+
+li{
+  color: red;
+}
