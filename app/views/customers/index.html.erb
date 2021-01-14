@@ -7,7 +7,7 @@
       <% if user_signed_in? %>
       <ul class="lists">
           <li class="login_list">
-           <%= "こんにちは#{current_user.name}さん" %>
+           <%= "こんにちは、#{current_user.name}さん" %>
           </li>
           <li class="right_list">
           <%= link_to "ログアウト", destroy_user_session_path,method: :delete,class: "login" %>

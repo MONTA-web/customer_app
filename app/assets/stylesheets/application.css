@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
- 
+
 .container{
   margin-top: 50px;
   border: 10px solid green;
@@ -41,6 +41,7 @@ label{
 
 input{
   width: 100%;
+  padding: 10px;
 }
 
 .actions{
