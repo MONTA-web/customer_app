@@ -1,0 +1,170 @@
+.customer_wrapper{
+  width: 100vw;
+  height: 1000px;
+  background-color: rgb(206, 203, 203);
+}
+
+.customer_main{
+  width: 100vw;
+  height: 70px;
+  background-color: green;
+  margin-bottom: 20px;
+}
+
+.customer_title{
+  font-size: 25px;
+  color: white;
+  padding: 20px 0 0 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* メイン */
+.customer_form{
+  width: calc(100vw - 300px);
+  height: 800px;
+  margin: auto;
+  background-color: white;
+  display: flex;
+}
+
+.form_title{
+  font-size: 20px;
+  padding: 20px 0 0 20px;
+  margin-bottom: 30px;
+  opacity: 0.8;
+  color: gray;
+}
+
+.left_form{
+  width: 50%;
+  padding: 0 40px;
+}
+
+.right_form{
+  width: 50%;
+  margin-top: 40px;
+  margin-left: 70px;
+  padding: 0 20px;
+}
+
+.name_field{
+  display: flex;
+  margin-top: 20px;
+}
+
+.last_name{
+  width: 50%;
+}
+
+.first_name{
+  width: 50%;
+  margin-top: 20px;
+  margin-left: 40px;
+}
+
+.postal_code{
+margin: 20px 300px 0 0;
+}
+
+.prefecture_field{
+  display: flex;
+  margin-top: 20px;
+}
+
+.city{
+  margin-left: 40px;
+}
+
+.house_number{
+  width: 40%;
+  margin-top: 20px;
+}
+
+.building{
+  width: 60%;
+  margin-top: 20px;
+}
+
+.phone{
+  width: 60%;
+  margin-top: 20px;
+}
+
+.product{
+  width: 400px;
+}
+
+span{
+display: flex;
+}
+
+.visit_field{
+  margin-top: 20px;
+}
+
+.visit_date{
+  display: flex;
+  table-layout: fixed;
+  width: 80%;
+}
+
+.purchase_field{
+  margin-top: 20px;
+}
+
+.purchase_date{
+  display: flex;
+  table-layout: fixed;
+  width: 80%;
+}
+
+.year{
+  display: flex;
+  margin-right: 10px;
+}
+
+.month{
+display: flex;
+margin-right: 10px;
+}
+
+.date{
+  display: flex;
+  margin-right: 10px;
+}
+
+.customer_field{
+  margin-top: 50px;
+  width: 80%;
+}
+
+.customer_culumn{
+  margin-top: 50px;
+}
+
+.customer_culumn textarea{
+  height: 200px;
+  width: 80%;
+  display: block;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.earnings{
+  width: 40%;
+  margin-top: 30px;
+}
+
+input{
+  font-size: 20px;
+}
+
+.actions{
+  width: 30%;
+  margin: auto;
+}
+
+.actions input{
+  border: 3px solid gray;
+  color: aliceblue;
+}
