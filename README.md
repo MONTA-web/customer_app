@@ -52,12 +52,8 @@
 | phone         | string       |                                |
 | product_name  | string       |                                |
 | amount_money  | integer      |                                |
-| visit_year    | string       | null: false                    |
-| visit_month   | string       | null: false                    |
-| visit_date    | string       | null: false                    |
-| purchase_year | string       |                                |
-| purchase_month| string       |                                |
-| purchase_date | string       |                                |
+| visit_date    | date       | null: false                    |
+| purchase_date | date       |                                |
 | remark_column | text         |                                |
 | user          | references   | null:false, foreign_key: true  |
 

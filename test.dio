@@ -1,6 +1,6 @@
-<mxfile host="65bd71144e" modified="2021-01-15T05:30:49.358Z" agent="5.0 (Macintosh; Intel Mac OS X 11_0_0) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.52.1 Chrome/83.0.4103.122 Electron/9.3.5 Safari/537.36" etag="6XR-7H7n395OXTm4xXgS" version="13.10.0" type="embed">
+<mxfile host="65bd71144e" modified="2021-01-15T06:17:31.723Z" agent="5.0 (Macintosh; Intel Mac OS X 11_0_0) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.52.1 Chrome/83.0.4103.122 Electron/9.3.5 Safari/537.36" etag="WlQ_0klmiHwVyuniJ9ni" version="13.10.0" type="embed">
     <diagram id="dMjz0EtO0mhwZHc72lJR" name="ページ1">
-        <mxGraphModel dx="205" dy="396" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+        <mxGraphModel dx="728" dy="459" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -35,7 +35,7 @@
                     <mxGeometry y="56" width="160" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="14" value="customers" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
-                    <mxGeometry x="290" y="270" width="160" height="590" as="geometry"/>
+                    <mxGeometry x="290" y="270" width="160" height="490" as="geometry"/>
                 </mxCell>
                 <mxCell id="15" value="last_name(姓)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="14" vertex="1">
                     <mxGeometry y="26" width="160" height="30" as="geometry"/>
@@ -43,8 +43,8 @@
                 <mxCell id="16" value="first_name(名)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="14" vertex="1">
                     <mxGeometry y="56" width="160" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="17" value="last_name(姓カナ)&#10;&#10;first_name_kana(名カナ)&#10;&#10;postal_code(郵便番号)&#10;&#10;prefecture(都道府県)&#10;&#10;city(市町村)&#10;&#10;house_number(番地)&#10;&#10;building_name(建物名)&#10;&#10;phone(電話番号)&#10;&#10;product_name(商品名)&#10;&#10;amount_money(売上高)&#10;&#10;visit_year(訪問年)&#10;&#10;visit_month(訪問月)&#10;&#10;visit_date(訪問日)&#10;&#10;purchase_year(購入年)&#10;&#10;purchase_month(購入月)&#10;&#10;purchase_date(購入日)&#10;&#10;remark_column(備考欄)&#10;&#10;user_id" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="14" vertex="1">
-                    <mxGeometry y="86" width="160" height="504" as="geometry"/>
+                <mxCell id="17" value="last_name(姓カナ)&#10;&#10;first_name_kana(名カナ)&#10;&#10;postal_code(郵便番号)&#10;&#10;prefecture(都道府県)&#10;&#10;city(市町村)&#10;&#10;house_number(番地)&#10;&#10;building_name(建物名)&#10;&#10;phone(電話番号)&#10;&#10;product_name(商品名)&#10;&#10;amount_money(売上高)&#10;&#10;visit_date(訪問日)&#10;&#10;purchase_date(購入日)&#10;&#10;remark_column(備考欄)&#10;&#10;user_id" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="14" vertex="1">
+                    <mxGeometry y="86" width="160" height="404" as="geometry"/>
                 </mxCell>
                 <mxCell id="18" value="room_customers" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
                     <mxGeometry x="520" y="270" width="160" height="86" as="geometry"/>
