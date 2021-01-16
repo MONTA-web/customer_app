@@ -16,5 +16,5 @@ class Customer < ApplicationRecord
   end
 
   validates :amount_money, format: {with:/\A[0-9]+\z/,message: "を半角数字で入力してください"}, allow_blank: true
-   
+   validates :remark_column,length: { minimum: 0, maximum: 150 }
 end
