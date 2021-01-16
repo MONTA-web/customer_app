@@ -1,6 +1,6 @@
 .customer_wrapper{
   width: 100vw;
-  height: 1000px;
+  height: 1100px;
   background-color: rgb(206, 203, 203);
 }
 
@@ -21,7 +21,7 @@
 /* メイン */
 .customer_form{
   width: calc(100vw - 300px);
-  height: 800px;
+  height: 780px;
   margin: auto;
   background-color: white;
   display: flex;
@@ -71,6 +71,12 @@ margin: 20px 300px 0 0;
   margin-top: 20px;
 }
 
+select{
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+}
+
 .city{
   margin-left: 40px;
 }
@@ -102,8 +108,12 @@ display: flex;
   margin-top: 20px;
 }
 
-.visit_date{
+.visit_area{
   display: flex;
+  width: 400px;
+}
+
+.visit_date{
   table-layout: fixed;
   width: 80%;
 }
@@ -112,41 +122,25 @@ display: flex;
   margin-top: 20px;
 }
 
-.purchase_date{
+.purchase_area{
   display: flex;
+  width: 400px;
+}
+
+.purchase_date{
   table-layout: fixed;
   width: 80%;
 }
 
-.year{
-  display: flex;
-  margin-right: 10px;
-}
-
-.month{
-display: flex;
-margin-right: 10px;
-}
-
-.date{
-  display: flex;
-  margin-right: 10px;
-}
-
-.customer_field{
-  margin-top: 50px;
-  width: 80%;
-}
-
 .customer_culumn{
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
-.customer_culumn textarea{
+.remark_textarea{
   height: 200px;
   width: 80%;
   display: block;
-  font-size: 20px;
+  font-size: 15px;
   padding: 10px;
 }
 
@@ -155,7 +149,7 @@ margin-right: 10px;
   margin-top: 30px;
 }
 
-input{
+.input_name{
   font-size: 20px;
 }
 
@@ -168,3 +162,4 @@ input{
   border: 3px solid gray;
   color: aliceblue;
 }
+
