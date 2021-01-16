@@ -1,0 +1,130 @@
+<div class="customer_wrapper">
+  <div class="customer_header">
+    <div class="customer_main">
+      <div class="customer_title">顧客管理</div>
+    </div>
+  </div>
+
+<div class="customer_field">
+<%= form_with model: @customer,url: customers_path, method: :post, local: true do |f| %>
+        <%= render "devise/shared/error_messages", model: f.object %>
+  <div class="customer_form">
+    
+      <div class="left_form">
+        <div class="form_title">顧客管理入力フォーム</div>
+        
+        <div class="name_field">
+          <div class="last_name">
+            <label>顧客名(全角)</label>
+            <%= f.text_field :last_name, class: "input_name",placeholder:"例) 山田" %>
+          </div>
+        
+          <div class="first_name">
+            <%= f.text_field :first_name, class: "input_name",placeholder:"例) 太郎"%>
+          </div>
+        </div>
+
+        <div class="name_field">
+          <div class="last_name">
+            <label>顧客名カナ(全角)</label>
+            <%= f.text_field :last_name_kana, class: "input_name", placeholder: "例)ヤマダ"%>
+          </div>
+
+          <div class="first_name">
+            <%= f.text_field :first_name_kana, class: "input_name", placeholder: "例) タロウ"%>
+          </div>
+        </div>
+
+          <div class="postal_code">
+            <label>郵便番号</label>
+            <%= f.text_field :postal_code, class: "input_name", placeholder: "例)123-4567", maxlength:"8" %>
+          </div>
+
+        <div class="prefecture_field">
+          <div class="prefecture">
+            <label>都道府県</label>
+            <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}) %>
+          </div>
+
+          <div class="city">
+            <label>市町村</label>
+            <%= f.text_field :city, class: "input_name"%>
+          </div>
+        </div>
+
+          <div class="house_number">
+            <label>番地</label>
+            <%= f.text_field :house_number,class: "input_name"%>
+          </div>
+
+          <div class="building">
+            <label>建物名</label>
+            <%= f.text_field :building_name,class: "input_name" %>
+          </div>
+
+          <div class="phone">
+            <label>電話番号</label>
+            <%= f.text_field :phone, class: "input_name", placeholder: "例) 09012345678",maxlength:"11" %>
+          </div>
+  
+      </div>
+
+      <div class="right_form">
+
+          <div class="product">
+            <label>商品名</label>
+            <%= f.text_field :product_name, class: "input_name" %>
+          </div>
+
+          <div class="earnings">
+            <label>売上高</label>
+            <span>
+              <%= f.text_field :amount_money,class:"input_name",placeholder: "例) 2000"%><em>円</em>
+            </span>
+          </div>
+        
+        <div class="visit_field">
+            
+            <label>訪問日</label>
+            <div class="visit_area">
+            <%= raw sprintf(
+              f.date_select(
+                :visit_date,
+                class:"visit_date",
+                use_month_numbers: true,
+                prompt:'--',start_year: 2000,
+                end_year: (Time.now.year - 5),
+                date_separator:'%s'),
+                "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+            </div>
+        </div>
+
+        <div class="purchase_field">
+            
+            <label>購入日</label>
+            <div class="purchase_area">
+            <%= raw sprintf(
+              f.date_select(
+                :purchase_date,
+                class:"purchase_date",
+                use_month_numbers: true,
+                prompt:'--',start_year: 2000,
+                end_year: (Time.now.year - 5),
+                date_separator:'%s'),
+                "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+            </div>
+        </div>
+
+          <div class="customer_culumn">
+            <label>備考欄</label>
+            <%= f.text_area :remark_column,class: "remark_textarea",placeholder: "150字以内" %>
+          </div>
+
+          <div class="actions">
+            <%= f.submit "顧客登録" %>
+          </div>
+      </div>
+    <% end %>  
+  </div>
+  </div>
+</div>

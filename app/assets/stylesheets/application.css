@@ -60,9 +60,7 @@ em{
   font-size: 20px;
 }
 
-.field_with_errors{
-  display: inline;
-}
+
 
 .login-flash-message{
   color: red;
@@ -71,4 +69,3 @@ em{
 li{
   color: red;
 }
-/* 再度コミット */
