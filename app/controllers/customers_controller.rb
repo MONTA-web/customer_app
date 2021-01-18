@@ -1,5 +1,6 @@
 class CustomersController < ApplicationController
-  before_action :authenticate_user!,only:[:index,:new,:create,:show,:edit,:update]
+  before_action :authenticate_user!,only:[:index,:new,:show,:edit]
+  before_action :set_customer,only:[:show,:edit,:update,:redirect_to_home,:destroy]
   before_action :redirect_to_home,only:[:show,:edit,:update]
 
   def index
@@ -20,20 +21,22 @@ class CustomersController < ApplicationController
   end
 
   def show
-    @customer = Customer.find(params[:id])
   end
 
   def edit
-    @customer = Customer.find(params[:id])
   end
 
   def update
-    @customer = Customer.find(params[:id])
     if @customer.update(customer_params)
       redirect_to customers_path
     else
       render :edit
     end
+  end
+
+  def destroy
+    @customer.destroy
+    redirect_to customers_path
   end
 
   private
@@ -42,10 +45,13 @@ class CustomersController < ApplicationController
   end
 
   def redirect_to_home
-    @customer = Customer.find(params[:id])
     unless @customer.user_id == current_user.id
       redirect_to root_path
     end
+  end
+
+  def set_customer
+    @customer = Customer.find(params[:id])
   end
 
 end
