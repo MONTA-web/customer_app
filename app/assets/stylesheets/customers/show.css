@@ -1,0 +1,22 @@
+.main_wrapper{
+  height: 100vh;
+  background-color: lightgray;
+}
+
+.customers_field{
+  height: calc(100% - 70px);
+  background-color: lightgray;
+}
+
+.customers_form{
+  width: calc(100vw - 300px);
+  margin: auto;
+  background-color: white;
+  display: flex;
+  padding-bottom: 40px;
+}
+
+.city_list{
+  margin-left: 40px;
+  width: 50%;
+}
