@@ -1,0 +1,26 @@
+<div class="customers_wrapper">
+  <div class="customer_header">
+    <div class="customer_main">
+      <div class="customer_title">顧客リスト一覧</div>
+    </div>
+  </div>
+
+  <div class="customers_container">
+    <div class="customer_container">
+      <div class="container_lists">
+        
+          <div class="list_name">名前</div>
+          <div class="list_address">住所</div>
+          <div class="list_visit_date">訪問日</div>
+          <div class="list_purchase_date">購入日</div>
+          <div class="list_plice">売上高</div>
+        
+      </div>
+      <% @customers.each do |customer| %>
+        <%= render partial: customer, locals: { customer: customer}%>
+      <% end %>
+
+    </div>
+  </div>
+
+</div>
