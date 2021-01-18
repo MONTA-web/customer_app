@@ -15,7 +15,7 @@
         
         <div class="name_field">
           <div class="last_name">
-            <label>顧客名(全角)</label>
+            <label>顧客名(全角)</label><label class="required">必須</label>
             <%= f.text_field :last_name, class: "input_name",placeholder:"例) 山田" %>
           </div>
         
@@ -26,7 +26,7 @@
 
         <div class="name_field">
           <div class="last_name">
-            <label>顧客名カナ(全角)</label>
+            <label>顧客名カナ(全角)</label><label class="required">必須</label>
             <%= f.text_field :last_name_kana, class: "input_name", placeholder: "例)ヤマダ"%>
           </div>
 
@@ -36,24 +36,24 @@
         </div>
 
           <div class="postal_code">
-            <label>郵便番号</label>
+            <label>郵便番号</label><label class="required">必須</label>
             <%= f.text_field :postal_code, class: "input_name", placeholder: "例)123-4567", maxlength:"8" %>
           </div>
 
         <div class="prefecture_field">
           <div class="prefecture">
-            <label>都道府県</label>
+            <label>都道府県</label><label class="required">必須</label>
             <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}) %>
           </div>
 
           <div class="city">
-            <label>市町村</label>
+            <label>市町村</label><label class="required">必須</label>
             <%= f.text_field :city, class: "input_name"%>
           </div>
         </div>
 
           <div class="house_number">
-            <label>番地</label>
+            <label>番地</label><label class="required">必須</label>
             <%= f.text_field :house_number,class: "input_name"%>
           </div>
 
@@ -85,7 +85,7 @@
         
         <div class="visit_field">
             
-            <label>訪問日</label>
+            <label>訪問日</label><label class="required">必須</label>
             <div class="visit_area">
             <%= raw sprintf(
               f.date_select(

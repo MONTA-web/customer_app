@@ -12,6 +12,7 @@
       <div class="left_form">
         <div class="form_title">詳細フォーム
         <%= link_to "編集", edit_customer_path(@customer.id) ,class: "edit" %>
+        /<%= link_to "削除", customer_path,method: :delete ,class: "delete"%>
         </div>
         
         <div class="name_field">
