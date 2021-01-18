@@ -25,6 +25,7 @@
   margin: auto;
   background-color: white;
   display: flex;
+  border: 2px double dimgrey;
 }
 
 .form_title{
@@ -151,9 +152,9 @@ display: flex;
 
 .input_name{
   font-size: 20px;
-  border: 1px solid black;
-  padding: 5px;
-}
+  }
+
+
 
 .actions{
   width: 30%;
@@ -164,4 +165,5 @@ display: flex;
   border: 3px solid gray;
   color: aliceblue;
 }
+
 

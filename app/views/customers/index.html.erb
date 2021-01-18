@@ -19,7 +19,9 @@
       <% @customers.each do |customer| %>
         <%= render partial: customer, locals: { customer: customer}%>
       <% end %>
-
+        <div class="top">
+          <%= link_to "トップページへ戻る", root_path %>
+        </div>
     </div>
   </div>
 

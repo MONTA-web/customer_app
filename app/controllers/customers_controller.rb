@@ -1,6 +1,6 @@
 class CustomersController < ApplicationController
-  before_action :authenticate_user!,only:[:index,:new,:create,:show]
-  before_action :redirect_to_home,only:[:show]
+  before_action :authenticate_user!,only:[:index,:new,:create,:show,:edit,:update]
+  before_action :redirect_to_home,only:[:show,:edit,:update]
 
   def index
    @customers = current_user.customers.order("created_at DESC")
@@ -21,6 +21,19 @@ class CustomersController < ApplicationController
 
   def show
     @customer = Customer.find(params[:id])
+  end
+
+  def edit
+    @customer = Customer.find(params[:id])
+  end
+
+  def update
+    @customer = Customer.find(params[:id])
+    if @customer.update(customer_params)
+      redirect_to customers_path
+    else
+      render :edit
+    end
   end
 
   private
