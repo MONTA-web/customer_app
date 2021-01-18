@@ -166,4 +166,8 @@ display: flex;
   color: aliceblue;
 }
 
+.required{
+  color: red;
+  font-size: 15px;
+}
 
