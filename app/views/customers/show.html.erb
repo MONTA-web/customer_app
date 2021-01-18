@@ -1,0 +1,159 @@
+<div class="main_wrapper">
+  <div class="customer_header">
+    <div class="customer_main">
+      <div class="customer_title">顧客情報詳細</div>
+    </div>
+  </div>
+
+<div class="customers_field">
+
+  <div class="customers_form">
+    
+      <div class="left_form">
+        <div class="form_title">詳細フォーム</div>
+        
+        <div class="name_field">
+          <div class="last_name">
+            <label>顧客名</label>
+            <div class="input_name">
+            <%= @customer.last_name %>
+            </div>
+          </div>
+        
+          <div class="first_name">
+            <div class="input_name">
+            <%= @customer.first_name %>
+            </div>
+          </div>
+        </div>
+
+        <div class="name_field">
+          <div class="last_name">
+            <label>顧客名カナ</label>
+            <div class="input_name">
+            <%= @customer.last_name_kana %>
+            </div>
+          </div>
+
+          <div class="first_name">
+            <div class="input_name">
+            <%= @customer.first_name_kana %>
+            </div>
+          </div>
+        </div>
+
+          <div class="postal_code">
+            <label>郵便番号</label>
+            <div class="input_name">
+            <%= @customer.postal_code %>
+            </div>
+          </div>
+
+        <div class="prefecture_field">
+          <div class="prefecture">
+            <label>都道府県</label>
+            <div class="input_name">
+            <%= @customer.prefecture.name %>
+            </div>
+          </div>
+
+          <div class="city_list">
+            <label>市町村</label>
+            <div class="input_name">
+            <%= @customer.city %>
+            </div>
+          </div>
+        </div>
+
+          <div class="house_number">
+            <label>番地</label>
+            <div class="input_name">
+            <%= @customer.house_number %>
+            </div>
+          </div>
+
+          <div class="building">
+            <label>建物名</label>
+            <div class="input_name">
+            <% unless @customer.building_name == "" %>
+            <%= @customer.building_name %>
+            <% else %>
+            <%= "未入力" %>
+            <% end %>
+            </div>
+          </div>
+
+          <div class="phone">
+            <label>電話番号</label>
+            <div class="input_name">
+            <% unless @customer.phone =="" %>
+            <%= @customer.phone %>
+            <% else %>
+            <%= "未入力" %>
+            <% end %>
+            </div>
+          </div>
+  
+      </div>
+
+      <div class="right_form">
+
+          <div class="product">
+            <label>商品名</label>
+            <div class="input_name">
+            <% unless @customer.product_name ==""%>
+            <%= @customer.product_name %>
+            <% else %>
+            <%= "未入力" %>
+            <% end %>
+            </div>
+          </div>
+
+          <div class="earnings">
+            <label>売上高</label>
+            <div class="input_name">
+            <% unless @customer.amount_money =="" %>
+              <%= "#{@customer.amount_money}円" %>
+            <% else %>
+              <%= "未入力" %>
+            <% end %>
+            </div>
+          </div>
+        
+        <div class="visit_field">
+            
+            <label>訪問日</label>
+            <div class="input_name">
+            <%= @customer.visit_date %>
+            </div>
+        </div>
+
+        <div class="purchase_field">
+            
+            <label>購入日</label>
+            <div class="input_name">
+            <% unless @customer.purchase_date == nil %>
+            <%= @customer.purchase_date %>
+            <% else %>
+              <%= "未入力" %>
+            <% end %>
+            </div>
+        </div>
+
+          <div class="customer_culumn">
+            <label>備考欄</label>
+            <div class="input_name">
+            <% unless @customer.remark_column =="" %>
+            <%= @customer.remark_column %>
+            <% else %>
+            <%= "なし" %>
+            <% end %>
+            </div>
+          </div>
+
+          
+      </div>
+    
+  </div>
+  </div>
+</div>

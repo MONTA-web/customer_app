@@ -9,6 +9,7 @@
   width: 100vw;
   height: calc(100vh - 70px);
   background-color: lightgray;
+  padding-bottom: 30px;
 }
 
 .customer_container{
@@ -17,6 +18,7 @@
   background-color: white;
   margin: 0 auto;
   font-size: 20px;
+  padding-top: 30px;
 }
 
 .container_lists{
@@ -30,6 +32,10 @@
 .list_name{
   border: 1px solid black;
   width: 150px;
+}
+
+.list_name a{
+  color: black;
 }
 
 .list_address{
@@ -52,4 +58,4 @@
   width: 200px;
 }
 
-
+ 
