@@ -29,12 +29,6 @@ RSpec.describe Customer, type: :model do
         expect(@customer).to be_valid
       end
 
-      it "amount_moneyが空でも登録することができる" do
-        @customer.amount_money=""
-        @customer.save
-        expect(@customer).to be_valid
-      end
-
       it "purchase_dateが空でも登録することができる" do
         @customer.purchase_date=""
         @customer.save
@@ -107,6 +101,18 @@ RSpec.describe Customer, type: :model do
         @customer.house_number=""
         @customer.valid?
         expect(@customer.errors.full_messages).to include("番地を入力してください")
+      end
+
+      it "amount_moneyが空だと登録することができる" do
+        @customer.amount_money=""
+        @customer.valid?
+        expect(@customer.errors.full_messages).to include("売上高を入力してください", "売上高を半角数字で入力してください")
+      end
+
+      it "amount_moneyが半角数字でないと登録できない" do
+        @customer.amount_money="９０００"
+        @customer.valid?
+        expect(@customer.errors.full_messages).to include("売上高を半角数字で入力してください")
       end
 
       it "visit_dateが空だと登録できない" do

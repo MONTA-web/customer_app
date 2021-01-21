@@ -13,10 +13,8 @@ class Customer < ApplicationRecord
     validates :prefecture_id, numericality: { other_than: 0 ,message: "を選択してください"}
     validates :city
     validates :house_number
-    validates :amount_money, format: {with:/\A[0-9]+\z/,message: "を半角数字で入力してください"}
+    validates :amount_money, numericality: { only_integer: true ,message: "を半角数字で入力してください"}
     validates :visit_date
   end
-
-  
    validates :remark_column,length: { minimum: 0, maximum: 150 }
 end
