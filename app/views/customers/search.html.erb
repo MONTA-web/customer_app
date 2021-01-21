@@ -1,0 +1,55 @@
+<div class="customers_wrapper">
+  <div class="customer_header">
+    <div class="customer_main">
+      <div class="customer_title">顧客リスト一覧</div>
+    </div>
+  </div>
+
+  <div class="search_form">
+    <%= render 'search_form'%>
+  </div>
+
+  <div class="customers_container">
+    <div class="customer_container">
+      <div class="container_lists">
+        
+          <div class="list_name">名前</div>
+          <div class="list_address">住所</div>
+          <div class="list_visit_date">訪問日</div>
+          <div class="list_purchase_date">購入日</div>
+          <div class="list_plice">売上高</div>
+        
+      </div>
+
+  <% if @results.length != 0 %>
+      <% @results.each do |result| %>
+        <% if current_user.id == result.user_id %>
+          <div class="container_lists">
+            <div class="list_name"><%=link_to "#{result.last_name}" "#{result.first_name}", customer_path(result.id) %></div>
+            <div class="list_address"><%= result.prefecture.name%><%= result.city%><%= result.house_number%><%= result.building_name%></div>
+            <div class="list_visit_date"><%= result.visit_date %></div>
+            <div class="list_purchase_date">
+            <% if result.purchase_date.present? %>
+              <%= result.purchase_date %>
+            <% else %>
+                <%= "未入力" %>
+            <% end %>
+            </div>
+            <div class="list_plice">
+                <%= result.amount_money %>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+  <% else %>
+    <div class="unresult">
+      該当する顧客情報はありません
+    </div>
+  <% end %>
+      
+        <div class="top">
+          <%= link_to "トップページへ戻る", root_path %>
+        </div>
+    </div>
+  </div>
+</div>

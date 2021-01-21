@@ -1,13 +1,13 @@
 .customer_wrapper{
   width: 100vw;
-  height: 1100px;
+  height: 100vh;
   background-color: rgb(206, 203, 203);
 }
 
 .customer_main{
   width: 100vw;
   height: 70px;
-  background-color: green;
+  background-color: #6495ed;
   margin-bottom: 20px;
 }
 
@@ -19,6 +19,12 @@
 }
 
 /* メイン */
+.customer_field{
+height: calc(100% -70px);
+background-color: rgb(206, 203, 203);
+padding-bottom: 30px;
+}
+
 .customer_form{
   width: calc(100vw - 300px);
   height: 780px;
@@ -111,6 +117,7 @@ display: flex;
 
 .visit_area{
   display: flex;
+  align-items: center;
   width: 400px;
 }
 
@@ -125,6 +132,7 @@ display: flex;
 
 .purchase_area{
   display: flex;
+  align-items: center;
   width: 400px;
 }
 
@@ -146,15 +154,13 @@ display: flex;
 }
 
 .earnings{
-  width: 40%;
+  width: 70%;
   margin-top: 30px;
 }
 
 .input_name{
   font-size: 20px;
   }
-
-
 
 .actions{
   width: 30%;
@@ -169,5 +175,9 @@ display: flex;
 .required{
   color: red;
   font-size: 15px;
+}
+
+.error-alert{
+  margin-left: 500px;
 }
 

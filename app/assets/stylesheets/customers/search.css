@@ -1,0 +1,96 @@
+.unresult{
+  text-align: center;
+  margin-top: 40px;
+}
+
+.search_form{
+  width: 500px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.search_name{
+  display: flex;
+  align-items: center;
+}
+
+.search_name label{
+  width: 25px;
+}
+
+.search_name input{
+  width: 150px;
+  margin-right: 30px;
+}
+
+.search_prefecture{
+  margin-top: 10px;
+}
+
+.search_city{
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.search_city label{
+  width: 70px;
+}
+
+.search_city input{
+  width: 300px;
+}
+
+.search_visit{
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.search_visit label{
+  width: 70px;
+}
+
+.search_visit input{
+width: 170px;
+}
+
+.search_purchase{
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.search_purchase label{
+  width: 70px;
+}
+
+.search_purchase input{
+  width: 170px;
+}
+
+.button{
+  width: 100px;
+  margin-left: 180px;
+}
+
+.btn{
+  background-color: lightseagreen;
+  font-size: 15px;
+}
+
+.search_money{
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  width: 800px;
+}
+
+.search_money label{
+  width: 70px;
+}
+
+.search_money input{
+  width: 20px;
+}
+
