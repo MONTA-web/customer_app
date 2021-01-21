@@ -7,7 +7,7 @@
 /* メイン */
 .customers_container{
   width: 100vw;
-  height: calc(100vh - 70px);
+  height: 100vh;
   background-color: lightgray;
   padding-bottom: 30px;
 }
@@ -31,7 +31,7 @@
 }
 
 .list_name{
-  border: 1px solid black;
+  border-right: 1px solid black;
   width: 150px;
 }
 
@@ -40,22 +40,21 @@
 }
 
 .list_address{
-  border: 1px solid black;
+  border-right: 1px solid black;
   width: 550px;
 }
 
 .list_visit_date{
-  border: 1px solid black;
+  border-right: 1px solid black;
   width: 150px;
 }
 
 .list_purchase_date{
-  border: 1px solid black;
+  border-right: 1px solid black;
   width: 150px;
 }
 
 .list_plice{
-  border: 1px solid black;
   width: 200px;
 }
 

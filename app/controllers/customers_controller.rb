@@ -2,7 +2,7 @@ class CustomersController < ApplicationController
   before_action :authenticate_user!,only:[:index,:new,:show,:edit]
   before_action :set_customer,only:[:show,:edit,:update,:redirect_to_home,:destroy]
   before_action :redirect_to_home,only:[:show,:edit,:update]
-
+  before_action :search_product,only:[:index,:search]
   def index
    @customers = current_user.customers.order("created_at DESC")
   end
@@ -39,6 +39,11 @@ class CustomersController < ApplicationController
     redirect_to customers_path
   end
 
+  def search
+    @results = @p.result
+  end
+
+
   private
   def customer_params
     params.require(:customer).permit(:last_name,:first_name,:last_name_kana,:first_name_kana,:postal_code,:prefecture_id,:city,:house_number,:building_name,:phone,:product_name,:amount_money,:visit_date,:purchase_date,:remark_column).merge(user_id: current_user.id)
@@ -52,6 +57,10 @@ class CustomersController < ApplicationController
 
   def set_customer
     @customer = Customer.find(params[:id])
+  end
+
+  def search_product
+    @p = Customer.ransack(params[:q])
   end
 
 end

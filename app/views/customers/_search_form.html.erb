@@ -1,0 +1,44 @@
+<%= search_form_for @p,url: search_customers_path do |f|%>
+        <div class="search_name">
+          <%= f.label :last_name_eq, "姓"%>
+          <%= f.search_field :last_name_eq, placeholder: "例) 山田" ,class: "input_name"%>
+          <%= f.label :first_name_eq, "名"%>
+          <%= f.search_field :first_name_eq, placeholder: "例) 太郎",class: "input_name"%>
+        </div>
+        
+          <div class="search_prefecture">
+            <%= f.label :prefecture_id_eq ,"都道府県"%>
+            <%= f.collection_select :prefecture_id_eq, Prefecture.all, :id, :name, include_blank: '指定なし'%>
+          </div>
+          <div class="search_city">
+            <%= f.label :city_cont ,"市町村" %>
+            <%= f.search_field :city_cont, class: "input_name" %>
+          </div>
+        <div class="search_visit">
+          <%= f.label :visit_date,"訪問日"%>
+          <%= f.text_field :visit_date_gteq ,class: "input_name",placeholder: "例) 2020-01-01"%><em>〜</em>
+          <%= f.text_field :visit_date_lteq ,class:"input_name"%>
+        </div>
+        <div class="search_purchase">
+          <%= f.label :purchase_date,"購入日"%>
+          <%= f.text_field :purchase_date_gteq ,class: "input_name",placeholder: "例) 2020-01-01"%><em>〜</em><%= f.text_field :purchase_date_lteq ,class: "input_name"%>
+        </div>
+        <div class="search_money">
+            <br>
+            <%= f.label :amount_money,"売上高", class: "input_name"%>
+            <%= f.radio_button :amount_money_lteq, '' %>
+            指定なし
+            <%= f.radio_button :amount_money_lteq, '0'%>
+            0円(未購入)
+            <%= f.radio_button :amount_money_lteq, '3000'%>
+            3000円以下
+            <%= f.radio_button :amount_money_lteq, '5000'%>
+            5000円以下
+            <%= f.radio_button :amount_money_lteq, '10000'%>
+            10000円以下
+        </div>
+            <div class="button">
+        <br>
+          <%= f.submit '検索', class:"btn"%>
+        </div>
+  <% end %>
