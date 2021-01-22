@@ -12,7 +12,7 @@ class CreateCustomers < ActiveRecord::Migration[6.0]
       t.string :building_name
       t.string :phone
       t.string :product_name
-      t.integer :amount_money,    null: false
+      t.string :amount_money
       t.date   :visit_date,       null: false
       t.date   :purchase_date
       t.text   :remark_column
