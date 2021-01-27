@@ -1,0 +1,91 @@
+.aggregate_wrapper{
+  width: 100vw;
+  height: 100vh;
+  background-color: lightgray;
+}
+
+.total_chart{
+  margin: 50px 0 20px;
+  background-color: white;
+  padding: 30px;
+}
+
+.chartjs-render-monitor{
+  margin: 50px 0 30px;
+  background-color: white;
+  padding: 20px 20px 10px 10px;
+}
+
+.aggregate_container{
+  width: 100%;
+  height: calc(100% -70px);
+  padding: 0 100px;
+  background-color: lightgrey;
+}
+
+.aggregate_search{
+  width: 600px;
+  height: 150px;
+  padding: 20px 50px;
+  background-color: white;
+  border: 2px solid black;
+  margin: 0 auto;
+}
+
+.search_field{
+  width: 600px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.input_date{
+  width: 180px;
+  font-size: 20px;
+}
+
+span{
+  opacity: 0.6;
+}
+
+.search_btn{
+  width: 80px;
+  margin-left: 35px;
+}
+
+.search_btn input{
+  background-color: lightseagreen;
+}
+
+.aggregate_results{
+  width: 300px;
+  margin: 0 auto;
+  padding: 50px 0 50px;
+}
+
+.aggregate_lists{
+  display: flex;
+  background-color: white;
+}
+
+.result_year{
+  width: 100px;
+  border: 1px solid black;
+  font-size: 20px;
+  text-align: right;
+}
+
+.result_month{
+  width: 50px;
+  border: 1px solid black;
+  font-size: 20px;
+  text-align: right;
+}
+
+.result_place{
+  width: 150px;
+  border: 1px solid black;
+  font-size: 20px;
+  text-align: right;
+}
