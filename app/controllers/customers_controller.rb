@@ -2,7 +2,7 @@ class CustomersController < ApplicationController
   before_action :authenticate_user!,only:[:index,:new,:show,:edit]
   before_action :set_customer,only:[:show,:edit,:update,:redirect_to_home,:destroy]
   before_action :redirect_to_home,only:[:show,:edit,:update]
-  before_action :search_product,only:[:index,:search]
+  before_action :search_product,only:[:index,:search,:aggregate_result,:aggregate_search]
   def index
    @customers = current_user.customers.order("created_at DESC")
   end
@@ -43,6 +43,13 @@ class CustomersController < ApplicationController
     @results = @p.result
   end
 
+  def aggregate_result
+  end
+
+  def aggregate_search
+    @aggregate = @p.result
+    @results = @aggregate.where(user_id: current_user.id).group("YEAR(purchase_date)").group("MONTH(purchase_date)").sum(:amount_money)
+  end
 
   private
   def customer_params

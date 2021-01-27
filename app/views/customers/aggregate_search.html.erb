@@ -1,0 +1,34 @@
+<div class="aggregate_wrapper">
+  <div class="customer_header">
+    <div class="customer_main">
+      <div class="customer_title">月別データ</div>
+    </div>
+  </div>
+
+  <div class="aggregate_container">
+      <%= render 'aggregate_search'%>
+      <%= column_chart @results, xtitle: "(月)", ytitle: "(売上総額)", height: "300px"%>
+
+    <div class="aggregate_results">     
+        <div class="aggregate_result">
+          <div class="aggregate_lists">
+            <div class="result_year">年</div>
+            <div class="result_month">月</div>
+            <div class="result_place">売上総額</div>
+          </div>
+        </div>
+    
+      <% @results.each do | year,price |%>
+        <% if price != 0 %>
+        <div class="aggregate_result">
+          <div class="aggregate_lists">
+            <div class="result_year"><%= "#{year[0]}" %>年</div>
+            <div class="result_month"><%= "#{year[1]}"%>月</div>
+            <div class="result_place"><%= "#{price}円" %></div>
+          </div>
+        </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
