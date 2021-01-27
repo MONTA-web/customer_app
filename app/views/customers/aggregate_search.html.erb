@@ -7,8 +7,9 @@
 
   <div class="aggregate_container">
       <%= render 'aggregate_search'%>
-      <%= column_chart @results, xtitle: "(月)", ytitle: "(売上総額)", height: "300px"%>
-
+    <div class="monitor">
+      <%= column_chart @results, xtitle: "(月)", ytitle: "(売上総額)", height: "300px" %>
+    </div>
     <div class="aggregate_results">     
         <div class="aggregate_result">
           <div class="aggregate_lists">
