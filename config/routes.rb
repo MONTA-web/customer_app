@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :customers do
     collection do
       get :search
+      get :aggregate_result
+      get :aggregate_search
     end
-  end
+  end 
 end
