@@ -48,7 +48,7 @@ class CustomersController < ApplicationController
 
   def aggregate_search
     @aggregate = @p.result
-    @results = @aggregate.where(user_id: current_user.id).group("YEAR(purchase_date)").group("MONTH(purchase_date)").sum(:amount_money)
+    @results = @aggregate.where(user_id: current_user.id).where("amount_money > ?", 1).group("YEAR(purchase_date)").group("MONTH(purchase_date)").sum(:amount_money)
   end
 
   private

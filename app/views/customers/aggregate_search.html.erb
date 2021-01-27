@@ -7,10 +7,16 @@
 
   <div class="aggregate_container">
       <%= render 'aggregate_search'%>
-    <div class="monitor">
-      <%= column_chart @results, xtitle: "(月)", ytitle: "(売上総額)", height: "300px" %>
+    <div class="monitor_title">
+      < 月別総売上グラフ >
     </div>
-    <div class="aggregate_results">     
+    <div class="monitor">
+      <%= column_chart @results, xtitle: "(月)", ytitle: "(売上)", height: "300px" %>
+    </div>
+    <div class="aggregate_results">
+      <div class=aggregate_title>
+          < 総売上表 >
+      </div>     
         <div class="aggregate_result">
           <div class="aggregate_lists">
             <div class="result_year">年</div>
@@ -30,6 +36,9 @@
         </div>
         <% end %>
       <% end %>
+      <div class="top">
+        <%= link_to "トップページへ戻る", root_path %>
+      </div>
     </div>
   </div>
 </div>
