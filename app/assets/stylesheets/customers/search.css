@@ -94,3 +94,13 @@ width: 170px;
   width: 20px;
 }
 
+.sort{
+  text-align: right;
+  margin-right: 90px;
+}
+
+.sort_link{
+  font-size: 15px;
+  color: brown;
+}
+
