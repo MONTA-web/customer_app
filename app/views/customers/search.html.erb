@@ -7,6 +7,14 @@
 
     <%= render 'search_form'%>
 
+    <div class="sort">
+        -- 並び切替 --
+        <%= sort_link(@p, :'amount_money desc', "売上(高い順)" )%> -
+        <%= sort_link(@p, :'amount_money asc', "売上(低い順)" )%> -
+        <%= sort_link(@p, :'purchase_date desc', "購入順" )%> -
+        <%= sort_link(@p, :'visit_date desc', "訪問順" )%> --
+    </div>
+
   <div class="customers_container">
     <div class="customer_container">
       <div class="container_lists">
