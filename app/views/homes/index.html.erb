@@ -1,7 +1,7 @@
 <div class="wrapper">
   <div class="main_header">
     <div class="header_title">
-      <div class="title">顧客管理アプリ</div>
+      <div class="title">顧客管理 App</div>
     </div>
       <div class="header_lists">
       <% if user_signed_in? %>
@@ -28,17 +28,20 @@
   
   <div class="main">
   <% if user_signed_in? %>
-    <ul class="contents">
-      <li class="upper_content">
-        <%= link_to "顧客情報作成",new_customer_path %>
-      </li>
-      <li class="middle_content">
-        <%= link_to "顧客情報一覧", customers_path %>
-      </li>
-      <li class="lower_content">
-        <%= link_to "月別データ", aggregate_result_customers_path %>
-      </li>
-    </ul>
+    <div class="contents">
+      <div class="upper_content">
+        <%= link_to image_tag("customer.jpg", class:"image_archive"),new_customer_path %>
+        <div class="text">新規顧客登録</div>
+      </div>
+      <div class="middle_content">
+        <%= link_to image_tag("archive.jpg", class:"image_archive"), customers_path %>
+        <div class="text">顧客情報一覧</div>
+      </div>
+      <div class="lower_content">
+        <%= link_to image_tag("sale_data.jpg",class:"image_archive"), aggregate_result_customers_path %>
+        <div class="text">月別総売上</div>
+      </div>
+    </div>
   <% end %>
   </div>
 </div>
