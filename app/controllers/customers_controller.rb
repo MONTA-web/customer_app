@@ -4,7 +4,8 @@ class CustomersController < ApplicationController
   before_action :redirect_to_home,only:[:show,:edit,:update]
   before_action :search_product,only:[:index,:search,:aggregate_result,:aggregate_search]
   def index
-   @customers = current_user.customers.order("created_at DESC")
+      customers = @p.result
+      @customers = customers.where(user_id: current_user.id)
   end
 
   def new
@@ -40,10 +41,12 @@ class CustomersController < ApplicationController
   end
 
   def search
-    @results = @p.result
+    @results = @p.result(search_params)
   end
 
   def aggregate_result
+    @aggregate = @p.result
+    @results = @aggregate.where(user_id: current_user.id).where("amount_money > ?", 1).group("YEAR(purchase_date)").group("MONTH(purchase_date)").sum(:amount_money)
   end
 
   def aggregate_search
@@ -68,6 +71,10 @@ class CustomersController < ApplicationController
 
   def search_product
     @p = Customer.ransack(params[:q])
+  end
+
+  def search_params
+    params.require(:q).permit(:sorts)
   end
 
 end
