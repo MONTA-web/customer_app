@@ -18,11 +18,11 @@
         <div class="search_visit">
           <%= f.label :visit_date,"訪問日"%>
           <%= f.text_field :visit_date_gteq ,class: "input_name",placeholder: "例) 2020-01-01"%><em>〜</em>
-          <%= f.text_field :visit_date_lteq ,class:"input_name"%>
+          <%= f.text_field :visit_date_lteq ,class:"input_name"%><em>まで</em>
         </div>
         <div class="search_purchase">
           <%= f.label :purchase_date,"購入日"%>
-          <%= f.text_field :purchase_date_gteq ,class: "input_name",placeholder: "例) 2020-01-01"%><em>〜</em><%= f.text_field :purchase_date_lteq ,class: "input_name"%>
+          <%= f.text_field :purchase_date_gteq ,class: "input_name",placeholder: "例) 2020-01-01"%><em>〜</em><%= f.text_field :purchase_date_lteq ,class: "input_name"%><em>まで</em>
         </div>
         <div class="search_money">
             <br>
