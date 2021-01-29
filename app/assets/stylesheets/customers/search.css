@@ -16,6 +16,7 @@
 
 .search_name label{
   width: 25px;
+  color: aliceblue;
 }
 
 .search_name input{
@@ -27,6 +28,10 @@
   margin-top: 10px;
 }
 
+.search_prefecture label{
+  color: aliceblue;
+}
+
 .search_city{
   display: flex;
   align-items: center;
@@ -35,6 +40,7 @@
 
 .search_city label{
   width: 70px;
+  color: aliceblue;
 }
 
 .search_city input{
@@ -49,6 +55,7 @@
 
 .search_visit label{
   width: 70px;
+  color: aliceblue;
 }
 
 .search_visit input{
@@ -63,6 +70,7 @@ width: 170px;
 
 .search_purchase label{
   width: 70px;
+  color: aliceblue;
 }
 
 .search_purchase input{
@@ -88,6 +96,7 @@ width: 170px;
 
 .search_money label{
   width: 70px;
+  color: aliceblue;
 }
 
 .search_money input{
@@ -100,7 +109,7 @@ width: 170px;
 }
 
 .sort_link{
-  font-size: 15px;
-  color: brown;
+  font-size: 17px;
+  color: yellow;
 }
 

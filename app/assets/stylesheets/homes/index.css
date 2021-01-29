@@ -5,11 +5,12 @@
 /* ヘッダー */
 .main_header{
   height: 200px;
-  background-color: rgb(128, 34, 34);
+  background-color: rgb(155, 49, 49);
 }
 
 .header_title{
   text-align: center;
+  padding-bottom: 20px;
 }
 
 .title{
@@ -26,22 +27,30 @@
   margin-top: 20px;
 }
 
-.left_list{
+.left_list :link{
   border: 2px solid gray;
   border-radius: 2px;
   padding: 20px;
   background-color: yellowgreen;
+  opacity: 0.9;
 }
 
-.right_list{
+.left_list :hover{
+  opacity: 1.0;
+}
+
+.right_list :link{
   border: 2px solid gray;
   border-radius: 2px;
   padding: 20px;
   margin-left: 40px;
   background-color: yellowgreen;
+  opacity: 0.9;
 }
 
-
+.right_list :hover{
+  opacity: 1.0;
+}
 
 .sign_up{
   text-decoration: none;
@@ -54,7 +63,6 @@
 }
 
 .login_list{
-  padding-top: 20px;
   color: white;
   font-family: monospace;
   font-size: 15px;
@@ -76,7 +84,7 @@
   padding-top: 100px;
 }
 
-.image_archive{
+.image_archive {
   width: 300px;
   height: 300px;
   border: 3px solid gray;

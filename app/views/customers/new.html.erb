@@ -6,7 +6,7 @@
   </div>
 
 <div class="customer_field">
-<%= form_with model: @customer,url: customers_path, method: :post, local: true do |f| %>
+  <%= form_with model: @customer,url: customers_path, method: :post, local: true do |f| %>
         <%= render "devise/shared/error_messages", model: f.object %>
   <div class="customer_form">
     
@@ -76,7 +76,7 @@
             <%= f.text_field :product_name, class: "input_name" %>
           </div>
 
-          <div class="earnings">
+          <div class="price">
             <label>売上高 (未購入時は0を入力)</label><label class="required">必須</label>
             <span>
               <%= f.text_field :amount_money,class:"input_name",placeholder: "例) 2000"%><em>円</em>

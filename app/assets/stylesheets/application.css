@@ -25,7 +25,7 @@
 
 .container{
   margin-top: 50px;
-  border: 10px solid rgb(128, 34, 34);
+  border: 10px solid rgb(170, 56, 56);
   padding: 40px;
   background-color: rgba(226, 219, 219, 0.8);
   width: 500px;
@@ -35,7 +35,7 @@
 
 .login_container{
   margin-top: 100px;
-  border: 10px solid rgb(128, 34, 34);
+  border: 10px solid rgb(170, 56, 56);
   padding: 40px;
   background-color: rgba(226, 219, 219, 0.8);
   width: 500px;
