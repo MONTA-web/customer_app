@@ -1,15 +1,17 @@
 .customers_wrapper{
   width: 100vw;
   height: 100vh;
-  background-color: lightgray;
+  background-image: url("/images/keith.jpg");
+  background-size: cover;
 }
 
 /* メイン */
 .customers_container{
-  width: 100vw;
+  width: 100%;
+  height: calc(100% -70px);
+  padding: 20px 0 30px;
   background-image: url("/images/keith.jpg");
   background-size: cover;
-  padding: 20px 0 30px;
 }
 
 .customer_container{
