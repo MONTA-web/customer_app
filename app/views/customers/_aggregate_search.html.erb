@@ -1,6 +1,6 @@
   <%= search_form_for @p,url: aggregate_search_customers_path do |f| %>
       <div class="aggregate_search">
-        <label class="search_form">検索フォーム</label><span>※指定した範囲の売上総額を月ごとに表示します</span>
+        <label class="search_head">検索フォーム</label><span>※指定した範囲の売上総額を月ごとに表示します</span>
         <div class="search_field">
           <%= f.text_field :purchase_date_gteq ,placeholder: "例) 2021-01-01",class: "input_date"%>〜
           <%= f.text_field :purchase_date_lteq ,placeholder: "例) 2021-12-31",class: "input_date"%>

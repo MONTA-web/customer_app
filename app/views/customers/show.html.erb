@@ -114,8 +114,8 @@
 
           <div class="earnings">
             <label>売上高</label>
-            <div class="show_name">
-            <% unless @customer.amount_money =="" %>
+            <div class="earning_name">
+            <% unless @customer.amount_money == "" %>
               <%= "#{@customer.amount_money}円" %>
             <% else %>
               <%= "未入力" %>

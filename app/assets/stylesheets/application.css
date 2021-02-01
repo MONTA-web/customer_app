@@ -44,9 +44,10 @@
 }
 
 h2{
-  font-size: 50px;
+  font-size: 40px;
   text-align: center;
   opacity: 0.6;
+  font-family: monospace;
 }
 
 .field{

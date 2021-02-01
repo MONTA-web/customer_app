@@ -1,5 +1,5 @@
 class CustomersController < ApplicationController
-  before_action :authenticate_user!,only:[:index,:new,:show,:edit]
+  before_action :authenticate_user!,only:[:index,:new,:show,:edit,:aggregate_result]
   before_action :set_customer,only:[:show,:edit,:update,:redirect_to_home,:destroy]
   before_action :redirect_to_home,only:[:show,:edit,:update]
   before_action :search_product,only:[:index,:search,:aggregate_result,:aggregate_search]
