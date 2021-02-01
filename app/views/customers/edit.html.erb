@@ -1,7 +1,7 @@
 <div class="customer_wrapper">
   <div class="customer_header">
     <div class="customer_main">
-      <div class="customer_title">顧客情報登録画面</div>
+      <div class="customer_title">顧客情報編集画面</div>
     </div>
   </div>
 
@@ -79,7 +79,7 @@
           <div class="earnings">
             <label>売上高 (未購入時は0を入力)</label><label class="required">必須</label>
             <span>
-              <%= f.text_field :amount_money,class:"input_name",placeholder: "例) 2000"%><em>円</em>
+              <%= f.text_field :amount_money,class:"earning_name",placeholder: "例) 2000"%><em>円</em>
             </span>
           </div>
         
@@ -121,7 +121,7 @@
           </div>
 
           <div class="actions">
-            <%= f.submit "顧客登録" %>
+            <%= f.submit "編集登録" %>
           </div>
       </div>
     <% end %>  

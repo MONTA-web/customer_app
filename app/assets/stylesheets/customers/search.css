@@ -4,19 +4,32 @@
 }
 
 .search_form{
-  width: 500px;
+  width: 650px;
+  height: 480px;
+  background-color: rgba(247, 243, 243, 0.8);
+  border: 3px solid rgb(151, 74, 19);
+  border-radius: 10px;
   margin: 0 auto;
+  padding: 20px;
   margin-bottom: 20px;
+}
+
+.search_top{
+  text-align: center;
+  padding-bottom: 20px;
+  font-family: monospace;
+  font-size: 25px;
 }
 
 .search_name{
   display: flex;
   align-items: center;
+  margin-left: 62px;
 }
 
 .search_name label{
   width: 25px;
-  color: aliceblue;
+  
 }
 
 .search_name input{
@@ -29,7 +42,7 @@
 }
 
 .search_prefecture label{
-  color: aliceblue;
+  margin-right: 3px;
 }
 
 .search_city{
@@ -40,7 +53,7 @@
 
 .search_city label{
   width: 70px;
-  color: aliceblue;
+  margin-right: 17px;
 }
 
 .search_city input{
@@ -55,7 +68,7 @@
 
 .search_visit label{
   width: 70px;
-  color: aliceblue;
+  margin-right: 17px;
 }
 
 .search_visit input{
@@ -70,7 +83,7 @@ width: 170px;
 
 .search_purchase label{
   width: 70px;
-  color: aliceblue;
+  margin-right: 17px;
 }
 
 .search_purchase input{
@@ -79,7 +92,7 @@ width: 170px;
 
 .button{
   width: 100px;
-  margin-left: 180px;
+  margin-left: 250px;
 }
 
 .btn{
@@ -92,11 +105,12 @@ width: 170px;
   align-items: center;
   margin-top: 20px;
   width: 800px;
+  
 }
 
 .search_money label{
   width: 70px;
-  color: aliceblue;
+  
 }
 
 .search_money input{
@@ -112,4 +126,3 @@ width: 170px;
   font-size: 17px;
   color: yellow;
 }
-

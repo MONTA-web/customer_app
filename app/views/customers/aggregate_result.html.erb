@@ -1,10 +1,10 @@
-<div class="customer_wrapper">
+<div class="aggregate_wrapper">
   <div class="customer_header">
     <div class="customer_main">
       <div class="customer_title">月別データ</div>
     </div>
   </div>
-
+  
   <div class="aggregate_container">
       <%= render 'aggregate_search'%>
     <div class="monitor_title">
@@ -16,7 +16,7 @@
     <div class="aggregate_results">
       <div class=aggregate_title>
           < 総売上表 >
-      </div>     
+      </div>
         <div class="aggregate_result">
           <div class="aggregate_lists">
             <div class="result_year">年</div>
@@ -36,7 +36,7 @@
         </div>
         <% end %>
       <% end %>
-      <div class="top">
+      <div class="return_top">
         <%= link_to "トップページへ戻る", root_path %>
       </div>
     </div>

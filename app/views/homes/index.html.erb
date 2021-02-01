@@ -30,15 +30,15 @@
   <% if user_signed_in? %>
     <div class="contents">
       <div class="upper_content">
-        <%= link_to image_tag("customer.jpg", class:"image_archive"),new_customer_path %>
+        <%= link_to image_tag("customer.jpg", class:"image_archive",id: "left_tag"), new_customer_path %>
         <div class="text">新規顧客登録</div>
       </div>
       <div class="middle_content">
-        <%= link_to image_tag("faile.jpg", class:"image_archive"), customers_path %>
+        <%= link_to image_tag("faile.jpg", class:"image_archive",id: "center_tag"), customers_path %>
         <div class="text">顧客情報一覧</div>
       </div>
       <div class="lower_content">
-        <%= link_to image_tag("sale_data.jpg",class:"image_archive"), aggregate_result_customers_path %>
+        <%= link_to image_tag("sale_data.jpg",class:"image_archive",id: "right_tag"), aggregate_result_customers_path %>
         <div class="text">月別総売上</div>
       </div>
     </div>

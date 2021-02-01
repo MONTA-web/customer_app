@@ -5,16 +5,19 @@
 
 .customers_field{
   height: calc(100% - 70px);
-  background-color: lightgray;
+  padding-top: 20px;
+  background-image: url("/images/keith.jpg");
+  background-size: cover;
 }
 
 .customers_form{
   width: calc(100vw - 300px);
   margin: auto;
-  background-color: white;
+  background-color: rgba(243, 239, 239, 0.9);
   display: flex;
   padding-bottom: 40px;
   border: 3px ridge gray;
+  border-radius: 5px;
 }
 
 .city_list{
@@ -23,6 +26,17 @@
 }
 
 .show_name{
+  font-size: 20px;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.earnings{
+ padding-top: 20px;
+}
+
+.earning_name{
+  width: 300px;
   font-size: 20px;
   border: 1px solid black;
   padding: 10px;
